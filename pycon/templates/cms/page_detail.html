@@ -29,4 +29,7 @@
 
 {% block breadcrumbs %}{% sitetree_breadcrumbs from "main" %}{% endblock %}
 
-{% block body %}{% if use_french %}{{ page.body_fr|safe }}{% else %}{{ page.body|safe }}{% endif %}{% endblock %}
+{% block body %}
+{% if page.subtitle %}Sub title: {{ page.subtitle }}{% endif %}
+{{ page.body|safe }}
+{% endblock %}
