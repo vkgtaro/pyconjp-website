@@ -2042,9 +2042,12 @@ msgstr "名前"
 msgid ""
 "If your talk is accepted this will be made public and printed in the "
 "program. Should be one paragraph, maximum 400 characters."
+"Please write in about 100 - 200 characters at least."
+
 msgstr ""
 "講演が承認されたら、このテキストはプログラムに印刷され、公開されます。 最大４"
-"００文字"
+"００文字。"
+"少なくとも約100 -200文字で書いてください。"
 
 #: symposion/proposals/models.py:95
 msgid "Detailed Abstract"
@@ -2052,7 +2055,9 @@ msgstr "詳細な説明"
 
 #: symposion/proposals/models.py:96
 msgid "Detailed description. Will be made public if your talk is accepted."
+"Please write in about 400 characters at least."
 msgstr "詳細な説明はあなたの講演が承認された後で公開されます。"
+"少なくとも約400文字で書いてください。"
 
 #: symposion/proposals/models.py:100
 msgid "Additional Notes"
