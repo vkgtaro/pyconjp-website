@@ -145,6 +145,7 @@ MIDDLEWARE_CLASSES = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "reversion.middleware.RevisionMiddleware",
     "social_auth.middleware.SocialAuthExceptionMiddleware",
+    "settinghost.middleware.SettingHost",
     # "debug_toolbar.middleware.DebugToolbarMiddleware",
 ]
 
