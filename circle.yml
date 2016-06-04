@@ -1,0 +1,28 @@
+machine:
+  services:
+    - docker
+
+dependencies:
+  cache_directories:
+    - "~/docker"
+
+  override:
+    - if [[ -e ~/docker/wheel.tar ]]; then docker load -i ~/docker/wheel.tar; fi
+    - docker info
+    - docker build -f Dockerfile.wheel -t pyconjp/wheelhouse:2016 .
+    - mkdir -p ~/docker; docker save pyconjp/wheelhouse:2016 > ~/docker/wheel.tar
+
+test:
+  override:
+    - sh ./scripts/test-new-packages.sh
+
+deployment:
+  production:
+    branch: master
+    commands:
+      - sh ./deploy/deploy_production.sh
+  staging:
+    branch: develop
+    commands:
+      - sh ./deploy/deploy_staging.sh
+

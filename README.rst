@@ -2,6 +2,12 @@
 PyCon JP サイト！
 =====================
 
+運用フロー
+----------------------
+
+* `各ブランチの役割 <https://github.com/pyconjp/pyconjp-website/wiki/%E5%90%84%E3%83%96%E3%83%A9%E3%83%B3%E3%83%81%E3%81%AE%E5%BD%B9%E5%89%B2>`_
+* `運用フロー <https://github.com/pyconjp/pyconjp-website/wiki/%E9%81%8B%E7%94%A8%E3%83%95%E3%83%AD%E3%83%BC%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6>`_
+
 ローカル開発
 ----------------------
 
@@ -9,14 +15,6 @@ PyCon JP サイト！
 
     $ virtualenv env/pycon
     $ . env/pycon/bin/activate
-
-* 依存するライブラリをインストールする::
-    
-    $ brew install libjpeg zlib  # OSX
-
-* Copy ``pycon/settings/local.py-example`` to ``pycon/settings/local.py``.
-* Edit ``pycon/settings/local.py`` according to the comments. Note that you
-  `will` have to edit it; by default everything there is commented out.
 
 * make::
 
@@ -28,8 +26,8 @@ PyCon JP サイト！
 
 * If you have ssh access to the staging server, copy the database and media::
 
-    $ fab staging get_db_dump:pycon2014
-    $ fab staging get_media
+    $ fab -f scripts/fabfile.py staging get_db_dump:pycon2014
+    $ fab -f scripts/fabfile.py staging get_media
 
   Change ``pycon2014`` in that first command to the name of your local database.
 
@@ -52,3 +50,10 @@ PyCon JP サイト！
     * 課題・機能・案件ごとにJIRAにてチケットを作成、チケットごとにトピックブランチを切る(ブランチの名前はTicketID
     * git-flowに乗せる。機能開発はfeatureブランチにて
     * 作業完了、要レビューの際はpull request、コミッターは小松さん
+
+
+Docker support
+----------------
+
+see README-Docker.md
+
