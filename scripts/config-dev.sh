@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export DEBUG=FALSE
+export DEBUG=
 export DJANGO_SETTINGS_MODULE=pyconjp.settings
 export ENVIRONMENT=dev
 export DB_ENGINE=sqlite3
@@ -19,4 +19,5 @@ export TWITTER_CONSUMER_SECRET=""
 export FACEBOOK_APP_ID=""
 export FACEBOOK_API_SECRET=""
 export GOOGLE_ANALYTICS_TRACKING_ID=""
+export SLACK_SPONSOR_WEBHOOK_URL=""
 

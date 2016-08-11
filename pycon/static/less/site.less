@@ -410,7 +410,6 @@ aside {
 
 .page-content {
   margin-top: 20px;
-  min-height: 500px;
   .box {
     padding-right: 25px;
   }
@@ -854,10 +853,13 @@ body.home {
             right: 14px;
           }
         }
-        &:nth-child(3)::before {
-          .rect(14px, @rect-color-orange);
-          position: relative;
-          right: 14px;
+        &:nth-child(3) {
+          width: 175px;
+          &::before{
+            .rect(14px, @rect-color-orange);
+            position: relative;
+            right: 14px;
+          }
         }
         &:last-child::after {
           .rect(14px, @rect-color-magenta);
@@ -1108,9 +1110,6 @@ body.sponsors {
       font-weight: 900;
       padding: 15px 0;
       font-size: 32px;
-    }
-    .container .span12:nth-child(5) .sponsor-content {
-      height: 200px;
     }
     .sponsor {
       border: 1px solid #d2d2cb;
@@ -1823,4 +1822,9 @@ header {
     width: 20px;
     text-align: center;
   }
+}
+
+.footer-creativeCommons a:nth-child(1) {
+  display: block;
+  margin: 10px 0 0;
 }
